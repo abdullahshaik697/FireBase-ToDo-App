@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Login </title>
+
+    <style>
+        
+        h1{
+            color: white;
+        }
+        body{
+            background-color: #65bd3c8e ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-container{
+            display: flex;
+            width: fit-content;
+            padding: 10px;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-around;
+            background-color:rgb(0, 19, 125) ;
+            border-radius:20px ;
+        }
+        input{
+            border-radius:5px ;
+            padding-left: 10px;
+            font-size: 1rem;
+            width: 90%;
+            height: 30px;
+            margin: 10px;
+        }
+        button{
+            border: none;
+            background-color: red;
+            color: white;
+            width: 30%;
+            border-radius:10px ;
+            height: 40px;
+            font-size: 1.1rem;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login Your Account</h1>
+        <input id="email" type="text" placeholder="Enter Email">
+        <input id="password" type="text" placeholder="Enter Password">
+        <Button id="signin">Login</Button>
+        <Button id="signup" onclick="window.location.replace('index.html')">Signup</Button>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCCNuV5ZkbK_rGTidhkCvnfZEc80oO6Nvg",
+            authDomain: "project-1-4cd87.firebaseapp.com",
+            projectId: "project-1-4cd87",
+            storageBucket: "project-1-4cd87.appspot.com",
+            messagingSenderId: "1022586691090",
+            appId: "1:1022586691090:web:2f52f40b44bed26577c2cb",
+            databaseURL: "https://project-1-4cd87-default-rtdb.firebaseio.com",
+            measurementId: "G-7NZQLCQ3C4"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="loginPage.js"></script>
+    
+</body>
+</html>

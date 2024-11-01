@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        label{
+            
+
+            font-size: 1.9rem;
+            color: white;
+
+        }
+    </style>
+    <title>To Do App</title>
+</head>
+<body>
+    <div class="mainPage-head">
+        <label >Welcome, </label>
+        <label id="name"></label><br>
+        <label >Email: </label>
+        <label id="email"></label>
+
+        <!-- <label >Welcome, </label><label id="name"></label><br>
+            <label >Email: </label><label id="email"></label> -->
+        
+     </div>
+        <div class="box">
+            <h1 style="text-align: center; font-family: tahoma; margin: 20px;">To Do App</h1>
+            <div class="inp-btn">
+
+                <input type="text" id="input-field"><button onclick="Add()" id="add-btn">Add</button>
+            </div>
+            
+            <div id="text">
+                <!-- ******* Empty in Starting *******  -->
+            </div>
+        </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+
+    
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyCCNuV5ZkbK_rGTidhkCvnfZEc80oO6Nvg",
+        authDomain: "project-1-4cd87.firebaseapp.com",
+        projectId: "project-1-4cd87",
+        storageBucket: "project-1-4cd87.appspot.com",
+        messagingSenderId: "1022586691090",
+        appId: "1:1022586691090:web:2f52f40b44bed26577c2cb",
+        databaseURL: "https://project-1-4cd87-default-rtdb.firebaseio.com",
+        measurementId: "G-7NZQLCQ3C4"
+    };
+    firebase.initializeApp(firebaseConfig);
+</script>
+
+    <script src="mainPage.js"></script>
+</body>
+</html>
